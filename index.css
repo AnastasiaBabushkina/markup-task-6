@@ -36,6 +36,19 @@ li
     justify-content: flex-end;
 }
 
+.settings .settings-open
+{
+    display: block;
+    padding: 10px;
+    direction: rtl;
+}
+
+input[name='settings']:checked + .settings-widgets,
+.settings-widgets label
+{
+    display: block;
+}
+
 .settings input,
 .settings-widgets
 {
@@ -94,18 +107,19 @@ li
     font-weight: 70;
 }
 
-time
+.data
 {
-    font-size: 53.6%;
+    font-size: 73.6%;
     color: #999;
     cursor: text;
+    display: inline;
 }
 
 .banner
 {
     grid-area: b;
     width: 210px;
-    height: 12  0px;
+    height: 210px;
 }
 
 .banner span
@@ -117,6 +131,11 @@ time
 .search
 {
     grid-area: s;
+}
+
+.traffic_icon
+{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\'…581.027-.293.04-.59.04-.891 0-5.411-4.486-9.8-9.939-9.899z\'/%3E%3C/svg%3E");
 }
 
 input
@@ -337,7 +356,7 @@ li span,
     padding-left: 5px;
 }
 
-.ad
+.ad_class
 {
     padding-bottom: 50px;
 }

@@ -8,6 +8,14 @@
 <body>
     <main class="muzzle">
         <div class="settings">
+            <input type="checkbox" id="popular" checked>
+            <input type="checkbox" id="jokes" checked>
+            <input type="checkbox" id="tv_program" checked>
+            <input type="checkbox" id="auto_news" checked>
+            <input type="checkbox" id="weather" checked>
+            <input type="checkbox" id="traffic" checked>
+            <input type="checkbox" id="map" checked>
+            <input type="checkbox" id="poster" checked>
             <label for="settings" class="open">
                 Настройка
             </label>
@@ -32,7 +40,8 @@
                 </div>
             </div>
         </aside>
-        <a href="https://yandex.ru/tune/geo/?retpath=https%3A%2F%2Fwww.yandex.ru%2F%3Fdomredir%3D1&nosync=1" class="city_block">
+        <a href="https://yandex.ru/tune/geo/?retpath=https%3A%2F%2Fwww.yandex.ru%2F%3Fdomredir%3D1" 
+        class="city_block">
             <div class="city_icon"></div>
             <span class="city">Екатеринбург</span>
         </a>
@@ -40,7 +49,9 @@
             <div class="logo">Яндекс</div>
         </div>
         <div class="news">
-            <div class="news_header"><h2>Сейчас в СМИ</h2><p> в Екатеринбурге<p> <time>20 ноября, понедельник 03:15</time></div>
+            <div class="news_header"><h2>Сейчас в СМИ</h2><p> в Екатеринбурге</p> 
+                <div class="data">20 ноября, понедельник 03:15</div>
+            </div>
             <ul>
                 <li>Президент Зимбабве отказался уходить в отставку</li>
                 <li>В МИД Украины рассказали о передаче США «опыта борьбы с россиянами»</li>
@@ -64,7 +75,7 @@
             </div>
         </div>
         <div class="banner">
-            <img src="pictures/optimize.png" width="130" height=100% alt="баннер">
+            <img src="pictures/optimize.png" width="130" height="120" alt="баннер">
             <span>Красивые фоны&nbsp; для вашего браузера</span>
             <p>Элементы Яндекса</p>
         </div>
@@ -74,7 +85,7 @@
                 <a href="https://yandex.ru/images/">Картинки</a>
                 <a href="https://news.yandex.ru/">Новости</a>
                 <a href="https://yandex.ru/maps">Карты</a>
-                <a href="https://market.yandex.ru/?clid=505&utm_source=face_abovesearch&utm_campaign=face_abovesearch">Маркет</a>
+                <a href="https://market.yandex.ru">Маркет</a>
                 <a href="https://translate.yandex.ru/">Переводчик</a>
                 <a href="https://music.yandex.ru/">Музыка</a>
                 <a href="#">ещё</a>
@@ -88,9 +99,11 @@
             <div class="recomendation">
                 Найдется всё.&nbsp; Например,<span> сколько весит слон</span>
             </div>
-            <div class="ad">
-            <a href="https://yastatic.net/morda/_/955lJ5/c6b773vo/GNuYYq/ypsUP/eay63H/B_3O73kh/WYKF/0p5w9Sg/U0Wva7Hl/Sg-PAQ/rp89CO/RoXltMg/fe/U-5MRV/Vkz18sOIa/t6-Jq7q/a2/3ItfnB/mf_qek5i60/klYl2D/2ipU/cufdXZ/AYmLkzU/tAp9LsO/qi/EcBqyPl/tEfdX/V0uLMIH/5cHdLMG/xraY8Gdp/7O/vvWSo1xB/66fvx/EuLYd/-bXYRVdtlq/w8/mZ-Xk1_-/-JhaeLOz/iKA/sDkd431/XdlLJ_Z/fPzzp0/RSKe0/HIYj1j-m/6S1i/LZE1MM4B/9-6_/inpyUy/F32o1QL1/f_I/BCWl9MF/76wTF/OWw95g/j5hpdt/NodEtD8e/DYy-gie/XkigL/QcE/IlD-KyauK/zCQNT/RJQbdu8A/L0Ktb7/tICL1G/wacnp/RlxE/eWfiuV/hK4LPs/GfeZfT2/4PUVH/bOv_zvn5/ElB6Ao/jLKAD/aHf-Qp/JKxx/jvW1g0T3rr/5O435a/6fibw/xvhXHm/60AE/Z1Mc7bgc/ebHBlTv/q8j8lz/Dt4ZF/fjw/pWlzBlh/ZRKCygAV/gXy/l5Za2gaFT0/fwEHbG/U_D/LT7keA6G/ELWb/J2-N5Bf/k1yRt_D/fkm/x1dU-g/5pqFtQRU/QxNzf4"><img src="pictures/ad.jpg" width=90% height=100% alt="реклама"></a>
-        </div>
+            <div class="ad_class">
+                <a href="#">
+                    <img src="pictures/ad.jpg" width=90% height=auto alt="реклама">
+                </a>
+            </div>
         </div>
         <div class="content">
             <div class="footer_block popular">
@@ -120,11 +133,14 @@
                 </ul>
             </div>
             <div class="footer_block weather">
-                <a href="#">Погода <i class="weather_icon"></i> <span>-3 &#8451;</span></a>
+                <a href="#">Погода 
+                    <span class="weather_icon"></span>
+                    <span>-3 &#8451;</span>
+                </a>
                 <div>Вечер -5, ночь -7</div>
             </div>
             <div class="footer_block traffic">
-                <a href="#">Пробки <i class="traffic_icon"></i> <span>4 балла</span></a>
+                <a href="#">Пробки <span class="traffic_icon"></span> <span>4 балла</span></a>
                 <div>Местами затруднения</div>
             </div>
             <div class="footer_block map">
@@ -159,11 +175,15 @@
                 <div class="auto_news_block">
                     <ul>
                         <li>Самая мощный автомобиль за всю историю Corvette <span>13:06</span></li>
-                        <li>Правительство поддержало законопроект о регистрации машиномест <span>12:19</span></li>
+                        <li>Правительство поддержало законопроект о регистрации машиномест 
+                            <span>12:19</span>
+                        </li>
                         <li>Обзор нового Mitsubishi, за которым выстроилась очередь <span>12:01</span></li>
                         <li>«Лады» оснастят системой управления со смартфона <span>11:40</span></li>
                         <li>В Китае представили спорткар с двигателем от Focus RS <span>11:30</span></li>
-                        <li>Священник отчитал прихожан, а они заставили его продать Porsche <span>12/11</span></li>
+                        <li>Священник отчитал прихожан, а они заставили его продать Porsche 
+                            <span>12/11</span>
+                        </li>
                     </ul>
                 </div>
             </div>
