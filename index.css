@@ -133,9 +133,23 @@ input[name='settings']:checked + .settings-widgets,
     grid-area: s;
 }
 
+.weather_icon,
 .traffic_icon
 {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\'…581.027-.293.04-.59.04-.891 0-5.411-4.486-9.8-9.939-9.899z\'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 37px;
+    height: 39px;
+    vertical-align: middle;
+}
+
+.traffic_icon
+{
+    background-image: url(pictures/traffic.svg);
+}
+
+.weather_icon
+{
+    background-image: url(pictures/weather.svg);
 }
 
 input
