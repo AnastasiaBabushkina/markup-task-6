@@ -7,7 +7,7 @@
 </head>
 <body>
     <main class="muzzle">
-        <aside class="settings">
+        <section class="settings">
             <input type="checkbox" id="popular" checked>
             <input type="checkbox" id="jokes" checked>
             <input type="checkbox" id="tv_program" checked>
@@ -20,17 +20,19 @@
                 Настройка
             </label>
             <input type="checkbox" name="settings" id="settings">
-            <div class="settings-widgets">
-                <label for="popular">Посещяемое</label>
-                <label for="jokes">Лучшие анекдоты</label>
-                <label for="tv_program">Телепрограмма</label>
-                <label for="auto_news">Автомобильные новости</label>
-                <label for="weather">Погода</label>
-                <label for="traffic">Пробки</label>
-                <label for="map">Карты Екатеринбурга</label>
-                <label for="poster">Афиша</label>
+            <div>
+                <div class="settings-widgets">
+                    <label for="popular">Посещяемое</label>
+                    <label for="jokes">Лучшие анекдоты</label>
+                    <label for="tv_program">Телепрограмма</label>
+                    <label for="auto_news">Автомобильные новости</label>
+                    <label for="weather">Погода</label>
+                    <label for="traffic">Пробки</label>
+                    <label for="map">Карты Екатеринбурга</label>
+                    <label for="poster">Афиша</label>
+                </div>
             </div>
-        </aside>
+        </section>
         <aside class="right-column">
             <div class="log_in">
                 <div class="login"><a href="#">login</a></div>
@@ -42,23 +44,25 @@
         </aside>
         <a href="https://yandex.ru/tune/geo/?retpath=https%3A%2F%2Fwww.yandex.ru%2F%3Fdomredir%3D1" 
         class="city_block">
-            <div class="city_icon"></div>
-            <span class="city">Екатеринбург</span>
+            <div class="city_hover">
+                <div class="city_icon"></div>
+                <span class="city">Екатеринбург</span>
+            </div>
         </a>
         <div class="logo_block">
             <div class="logo">Яндекс</div>
         </div>
-        <div class="news">
+        <section class="news">
             <div class="news_header"><h2>Сейчас в СМИ</h2> <p>в Екатеринбурге</p> 
                 <div class="data">20 ноября, понедельник 03:15</div>
             </div>
-            <ul>
+            <menu>
                 <li>Президент Зимбабве отказался уходить в отставку</li>
                 <li>В МИД Украины рассказали о передаче США «опыта борьбы с россиянами»</li>
                 <li>Порошенко назвал Украину успешной космической державой</li>
                 <li>Эрдоган видит в скандале на учениях НАТО оскорбление для всей Турции</li>
                 <li>Михаил Саакашвили заявил о готовности возглавить правительство Украины</li>
-            </ul>
+            </menu>
             <div class="money">
                 <div class="currency">
                     <a href="https://news.yandex.ru/quotes/1.html">USD&nbsp; ЦБ</a>
@@ -73,13 +77,15 @@
                     <span class="cost">62,74</span>
                 </div>
             </div>
-        </div>
-        <div class="banner">
-            <img src="pictures/optimize.png" width="130" height="120" alt="баннер">
-            <span>Красивые фоны&nbsp; для вашего браузера</span>
+        </section>
+        <section class="banner">
+            <div class="banner_img">
+                <img src="pictures/optimize.png" width="130" height="120" alt="баннер">
+                <span>Красивые фоны&nbsp; для вашего браузера</span>
+            </div>
             <p>Элементы Яндекса</p>
-        </div>
-        <div class="search">
+        </section>
+        <section class="search">
             <nav class="links">
                 <a href="https://yandex.ru/video">Видео</a>
                 <a href="https://yandex.ru/images/">Картинки</a>
@@ -104,12 +110,12 @@
                     <img src="pictures/ad.jpg" width="550"  height="100" alt="реклама">
                 </a>
             </div>
-        </div>
-        <div class="content">
-            <aside class="footer_block popular">
+        </section>
+        <section class="content">
+            <article class="footer_block popular">
                 <a href="#">Посещаемое</a>
                 <div>
-                    <ul>
+                    <menu>
                         <li><span class="first_word">Маркет</span> - китайская распродажа</li>
                         <li><span class="first_word">Авто.ру</span> - Туссан третьей серии</li>
                         <li><span class="first_word">Недвижимость</span> - продажа студии</li>
@@ -117,63 +123,77 @@
                         <li><span class="first_word">Здоровье</span> - врач на связи</li>
                         <li><span class="first_word">Коллекци</span> - как мелировать волосы</li>
                         <li><span class="first_word">Авиабилеты</span> - из Екатеринбурга</li>
-                    </ul>
+
+                    </menu>
                 </div>
-            </aside>
-            <aside class="footer_block tv_program">
+            </article>
+            <article class="footer_block tv_program">
                 <a href="#">Телепрограмма</a>
                 <span class="online">ТВ онлайн</span>
-                <ul>
+                <menu>
                     <li>16:00 Понять. Простить<span class="channel">41 Домашний</span></li>
                     <li>16:30 Место встречи<span class="channel">НТВ</span></li>
                     <li>16:30 Детективы<span class="channel">Пятый канал</span></li>
                     <li>16:30 Новости<span class="channel">РЕН ТВ</span></li>
                     <li>16:30 Гадалка<span class="channel">ТВ-3</span></li>
                     <li>16:30 Реальные пацаны<span class="channel">ТНТ</span></li>
-                </ul>
-            </aside>
-            <aside class="footer_block weather">
+                </menu>
+            </article>
+            <article class="footer_block weather">
                 <a href="#">Погода 
                     <span class="weather_icon"></span>
                     <span>-3 &#8451;</span>
                 </a>
                 <div>Вечер -5, ночь -7</div>
-            </aside>
-            <aside class="footer_block traffic">
+            </article>
+            <article class="footer_block traffic">
                 <a href="#">Пробки <span class="traffic_icon"></span> <span>4 балла</span></a>
                 <div>Местами затруднения</div>
-            </aside>
-            <aside class="footer_block map">
+            </article>
+            <article class="footer_block map">
                 <a href="#">Карты Екатеринбурга</a>
                 <div>
                     <span>Такси</span> <span>Расписания</span> <span>Междугородние автобусы</span>
                 </div>
-            </aside>
-            <aside class="footer_block poster">
+            </article>
+            <article class="footer_block poster">
                 <a href="#">Афиша</a>
-                <ul>
+                <menu>
                     <li>Субурбикон <span>премьера в чт</span></li>
                     <li>Последний богатырь <span>приключения</span></li>
                     <li>Фиксики: Большой секрет <span>мультфильм</span></li>
                     <li>Тор: Рагнарёк <span>фэнтази</span></li>
                     <li>Убийство в Восточном экспрессий<span>драма</span></li>
                     <li class="favorite">Концерты - Brainstorm</li>
-                </ul>
-            </aside>
-            <aside class="footer_block jockes">
+                </menu>
+            </article>
+            <article class="footer_block jockes">
                 <a href="#">Лучшие анекдоты</a>
-                <div>
+                <input name="more" type="radio" value="1" id="next-1" checked>
+                <div class="jocke">
                     <div>Раздел: <a href="#" class="section">Медицинские</a></div>
-                    <ul>
+                    <menu>
                         <li>-Вас лечить хорошо или бесплатно?</li>
-                    </ul>
+                    </menu>
+                    <label for="next-1" class="more">
+                        <span>Показать ещё</span>
+                    </label>
                 </div>
-                <div class="more">Показать ещё</div>
-            </aside>
-            <aside class="footer_block auto_news">
+                <input name="more" type="radio" value="2" id="next-2" checked>
+                <div class="jocke">
+                    <div>Раздел: <a href="#" class="section">IT</a></div>
+                    <menu>
+                        <li>-Дедлайн</li>
+                    </menu>
+                    <label for="next-2" class="more">
+                        <span>Показать ещё</span>
+                    </label>
+                </div>
+            </article>
+            <article class="footer_block auto_news">
                 <a href="#">Автомобильные новости</a>
                 <div class="auto_news_block">
-                    <ul>
+                    <menu>
                         <li>Самая мощный автомобиль за всю историю Corvette <span>13:06</span></li>
                         <li>Правительство поддержало законопроект о регистрации машиномест 
                             <span>12:19</span>
@@ -184,10 +204,12 @@
                         <li>Священник отчитал прихожан, а они заставили его продать Porsche 
                             <span>12/11</span>
                         </li>
-                    </ul>
+                    </menu>
+                    <div class="blackout-top"></div>
+                    <div class="blackout-bottom"></div>
                 </div>
-            </aside>
-        </div>
+            </article>
+        </section>
     </main>
 </body>
 </html>

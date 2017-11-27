@@ -42,19 +42,49 @@ li
     direction: rtl;
 }
 
-input[name='settings']:checked + .settings-widgets,
+input[name='settings']:checked + div .settings-widgets,
 .settings-widgets label
 {
     display: block;
 }
 
+input[id='popular']:not(:checked) ~ .footer_block .popular,
+input[id='jockes']:not(:checked) ~ .footer_block .jockes,
+input[id='tv_program']:not(:checked) ~ .footer_block .tv_program,
+input[id='auto_news']:not(:checked) ~ .footer_block .auto_news,
+input[id='weather']:not(:checked) ~ .footer_block .weather,
+input[id='traffic']:not(:checked) ~ .footer_block .traffic,
+input[id='map']:not(:checked) ~ .footer_block .map,
+input[id='poster']:not(:checked) ~ .footer_block .poster
+{
+    display: none;
+}
+
+.jockes input,
 .settings input,
 .settings-widgets
 {
     display: none;
 }
 
-.settings label
+.settings-widgets label
+{
+    padding: 5px;
+}
+
+.settings-widgets
+{
+    position: absolute;
+    right: 10%;
+    top: 50px;
+    font-size: 11px;
+    background-color: #fff;
+    width: 180px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.2), 0 6px 8px 0 rgba(0,0,0,.2);
+    border-radius: 3px;
+}
+
+.settings .open
 {
     padding: 10px;
 }
@@ -119,7 +149,12 @@ input[name='settings']:checked + .settings-widgets,
     padding: 20px;
 }
 
-.banner span
+.banner_img
+{
+    cursor: pointer;
+}
+
+.banner_img span
 {
     font-size: 17px;
     font-weight: 400;
@@ -167,16 +202,23 @@ input
     color: #000;
 }
 
+.button_text
+{
+    position: relative;
+}
+
 .button_text:before 
 {
+    right: calc(-38.5%);
+    border-width: 16px 0 16px 9px;
     position: absolute;
     width: 0;
     height: 0;
     content: '';
-    right: 13.6%;
     border-style: solid;
     border-color: rgba(255,219,76,0);
     border-left-color: inherit;
+    color: #ffdb4d;
 }
 
 .button_search
@@ -184,6 +226,7 @@ input
     font-size: 13px;
     width: 8%;
     height: 32px;
+    vertical-align: top;
     border: none;
     background-color: #ffdb4d;
     margin-left: -7px;
@@ -193,16 +236,15 @@ input
 
 .links
 {
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
+    padding-bottom: 10px;
+    width: 100%;
     grid-area: s;
 }
 
 .links a
 {
     color: #0054b9;
-    padding: 10px;
+    padding-right: 15px;
 }
 
 .content
@@ -258,6 +300,20 @@ input
 .tv_program
 {
     grid-area: tv;
+    display: block;
+}
+
+.tv_program .online
+{
+    cursor: pointer;
+    padding: 5px;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #418af9;
+    background-clip: padding-box;
+    background-image: linear-gradient(to right,#00a3fa,#716ef8);
 }
 
 .news
@@ -304,11 +360,19 @@ input
 .city:hover,
 a:hover,
 li:hover,
-.city_block:hover,
+.city_hover:hover,
+.recomendation span:hover,
+.banner_img:hover,
+.banner_img span:hover,
 .news_header h2:hover,
 .news_header p:hover
 {
     color: #c00;
+}
+
+.city_hover
+{
+    width: 50%;
 }
 
 .city_icon
@@ -327,7 +391,7 @@ span,
     color: #0054b9;
 }
 
-.city_block:hover .city_icon
+.city_hover:hover .city_icon
 {
     background-position-y: bottom;
 }
@@ -370,7 +434,7 @@ li span,
 
 .bottom_banner a img
 {
-    padding-bottom: 50px;
+    padding-bottom: 5px;
     width: 90%;
     height: 100%;
 
@@ -384,7 +448,7 @@ li span,
     font-size: 13px;
 }
 
-ul
+menu
 {
     padding: 0;
     font-size: 13px;
@@ -400,7 +464,18 @@ ul
     font-size: 18px;
 }
 
+.footer_block a:focus
+{
+    outline: 2px solid #ffdb4d;
+}
+
 .auto_news_block
+{
+    max-height: 200px;
+    position: relative;
+}
+
+.auto_news_block menu
 {
     overflow-y: scroll;
     max-height: 200px;
@@ -409,4 +484,29 @@ ul
 .footer_block li
 {
     list-style-type: none;
+}
+
+.auto_news_block menu::-webkit-scrollbar
+{
+    width: 0;
+}
+
+.auto_news_block .blackout-bottom,
+.auto_news_block .blackout-top
+{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+}
+
+.auto_news_block .blackout-top
+{
+    top: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0), rgba(255,255,255,1));
+}
+
+.auto_news_block .blackout-bottom
+{
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(255,255,255,1));
 }
