@@ -23,6 +23,13 @@ a
     color: #000;
 }
 
+h1:focus,
+h2:focus,
+a:focus
+{
+    outline: 3px solid #ffdb4d;
+}
+
 li
 {
     padding: 5px;
@@ -35,6 +42,18 @@ li
     justify-content: flex-end;
 }
 
+.settings-widgets label::before
+{
+    content: '';
+    background-image: url('pictures/checkbox.png');
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    display: inline-block;
+    background-size: contain;
+    vertical-align: bottom;
+}
+
 .settings .settings-open
 {
     display: block;
@@ -43,25 +62,38 @@ li
 }
 
 input[name='settings']:checked + div .settings-widgets,
+.jockes input:checked + .jocke,
 .settings-widgets label
 {
     display: block;
 }
 
-input[id='popular']:not(:checked) ~ .footer_block .popular,
-input[id='jockes']:not(:checked) ~ .footer_block .jockes,
-input[id='tv_program']:not(:checked) ~ .footer_block .tv_program,
-input[id='auto_news']:not(:checked) ~ .footer_block .auto_news,
-input[id='weather']:not(:checked) ~ .footer_block .weather,
-input[id='traffic']:not(:checked) ~ .footer_block .traffic,
-input[id='map']:not(:checked) ~ .footer_block .map,
-input[id='poster']:not(:checked) ~ .footer_block .poster
+input[id='popular']:checked ~ .settings label[for='popular']::before,
+input[id='jockes']:checked ~ .settings label[for='jockes']::before,
+input[id='tv_program']:checked ~ .settings label[for='tv_program']::before,
+input[id='auto_news']:checked ~ .settings label[for='auto_news']::before,
+input[id='weather']:checked ~ .settings label[for='weather']::before,
+input[id='traffic']:checked ~ .settings label[for='traffic']::before,
+input[id='map']:checked ~ .settings label[for='map']::before,
+input[id='poster']:checked ~ .settings label[for='poster']::before
+{
+    background-image: url('pictures/checked.png');
+}
+
+input[id='popular']:not(:checked) ~ .content .popular,
+input[id='jockes']:not(:checked) ~ .content .jockes,
+input[id='tv_program']:not(:checked) ~ .content .tv_program,
+input[id='auto_news']:not(:checked) ~ .content .auto_news,
+input[id='weather']:not(:checked) ~ .content .weather,
+input[id='traffic']:not(:checked) ~ .content .traffic,
+input[id='map']:not(:checked) ~ .content .map,
+input[id='poster']:not(:checked) ~ .content .poster
 {
     display: none;
 }
 
-.jockes input,
-.settings input,
+input,
+.jockes .jocke,
 .settings-widgets
 {
     display: none;
@@ -75,7 +107,7 @@ input[id='poster']:not(:checked) ~ .footer_block .poster
 .settings-widgets
 {
     position: absolute;
-    right: 10%;
+    right: 13%;
     top: 50px;
     font-size: 11px;
     background-color: #fff;
@@ -158,6 +190,11 @@ input[id='poster']:not(:checked) ~ .footer_block .poster
 {
     font-size: 17px;
     font-weight: 400;
+}
+
+.search_string
+{
+    display: inline-block;
 }
 
 .search
@@ -249,58 +286,13 @@ input
 
 .content
 {
-    width: 100%;
-    max-height: 390px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    max-height: 490px;
     grid-area: c;
-    grid-template: 'po tv w'
-        'po tv pr'
-        'po tv k'
-        'an av af';
-    grid-auto-columns: minmax(250px, 300px);
-}
-
-.auto_news
-{
-    max-height: 180px;
-    max-width: 300px;
-    grid-area: av;
-}
-
-.popular
-{
-    grid-area: po;
-}
-
-.weather
-{
-    grid-area: w;
-}
-
-.traffic
-{
-    grid-area: pr;
-}
-
-.map
-{
-    grid-area: k;
-}
-
-.poster
-{
-    grid-area: af;
-}
-
-.jockes
-{
-    grid-area: an;
-}
-
-.tv_program
-{
-    grid-area: tv;
-    display: block;
+    
 }
 
 .tv_program .online
@@ -456,7 +448,8 @@ menu
 
 .footer_block
 {
-    padding: 13px;
+    width: 34%;
+    padding-right: 15px;
 }
 
 .footer_block a
@@ -467,6 +460,13 @@ menu
 .footer_block a:focus
 {
     outline: 2px solid #ffdb4d;
+}
+
+.weather,
+.traffic,
+.map
+{
+    min-height: 75px;
 }
 
 .auto_news_block

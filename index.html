@@ -7,15 +7,15 @@
 </head>
 <body>
     <main class="muzzle">
+        <input type="checkbox" id="popular" checked>
+        <input type="checkbox" id="jockes" checked>
+        <input type="checkbox" id="tv_program" checked>
+        <input type="checkbox" id="auto_news" checked>
+        <input type="checkbox" id="weather" checked>
+        <input type="checkbox" id="traffic" checked>
+        <input type="checkbox" id="map" checked>
+        <input type="checkbox" id="poster" checked>
         <section class="settings">
-            <input type="checkbox" id="popular" checked>
-            <input type="checkbox" id="jokes" checked>
-            <input type="checkbox" id="tv_program" checked>
-            <input type="checkbox" id="auto_news" checked>
-            <input type="checkbox" id="weather" checked>
-            <input type="checkbox" id="traffic" checked>
-            <input type="checkbox" id="map" checked>
-            <input type="checkbox" id="poster" checked>
             <label for="settings" class="open">
                 Настройка
             </label>
@@ -23,7 +23,7 @@
             <div>
                 <div class="settings-widgets">
                     <label for="popular">Посещяемое</label>
-                    <label for="jokes">Лучшие анекдоты</label>
+                    <label for="jockes">Лучшие анекдоты</label>
                     <label for="tv_program">Телепрограмма</label>
                     <label for="auto_news">Автомобильные новости</label>
                     <label for="weather">Погода</label>
@@ -97,7 +97,7 @@
                 <a href="#">ещё</a>
             </nav>
             <form class="search_form" action="https://yandex.ru/search/">
-                <input type="text" name="text">
+                <input type="text" name="text" class="search_string">
                 <button class="button_search" type="submit">
                     <span class="button_text">Найти</span>
                 </button>
@@ -127,6 +127,30 @@
                     </menu>
                 </div>
             </article>
+            <article class="footer_block jockes">
+                <a href="#">Лучшие анекдоты</a>
+                <input name="jocke" type="radio" value="1" id="next-1" checked>
+                <div class="jocke">
+                    <div>Раздел: <a href="#" class="section">Медицинские</a></div>
+                    <menu>
+                        <li>-Вас лечить хорошо или бесплатно?</li>
+                    </menu>
+                    <label for="next-2" class="more">
+                        <span>Показать ещё</span>
+                    </label>
+                </div>
+                <input name="jocke" type="radio" value="2" id="next-2" checked>
+                <div class="jocke">
+                    <div>Раздел: <a href="#" class="section">Про русских</a></div>
+                    <menu>
+                        <li>- Китайские палочки - это на самом
+                         деле хорошо обглоданные деревянные русские ложки..</li>
+                    </menu>
+                    <label for="next-1" class="more">
+                        <span>Показать ещё</span>
+                    </label>
+                </div>
+            </article>
             <article class="footer_block tv_program">
                 <a href="#">Телепрограмма</a>
                 <span class="online">ТВ онлайн</span>
@@ -138,6 +162,25 @@
                     <li>16:30 Гадалка<span class="channel">ТВ-3</span></li>
                     <li>16:30 Реальные пацаны<span class="channel">ТНТ</span></li>
                 </menu>
+            </article>
+            <article class="footer_block auto_news">
+                <a href="#">Автомобильные новости</a>
+                <div class="auto_news_block">
+                    <menu>
+                        <li>Самая мощный автомобиль за всю историю Corvette <span>13:06</span></li>
+                        <li>Правительство поддержало законопроект о регистрации машиномест 
+                            <span>12:19</span>
+                        </li>
+                        <li>Обзор нового Mitsubishi, за которым выстроилась очередь <span>12:01</span></li>
+                        <li>«Лады» оснастят системой управления со смартфона <span>11:40</span></li>
+                        <li>В Китае представили спорткар с двигателем от Focus RS <span>11:30</span></li>
+                        <li>Священник отчитал прихожан, а они заставили его продать Porsche 
+                            <span>12/11</span>
+                        </li>
+                    </menu>
+                    <div class="blackout-top"></div>
+                    <div class="blackout-bottom"></div>
+                </div>
             </article>
             <article class="footer_block weather">
                 <a href="#">Погода 
@@ -166,48 +209,6 @@
                     <li>Убийство в Восточном экспрессий<span>драма</span></li>
                     <li class="favorite">Концерты - Brainstorm</li>
                 </menu>
-            </article>
-            <article class="footer_block jockes">
-                <a href="#">Лучшие анекдоты</a>
-                <input name="more" type="radio" value="1" id="next-1" checked>
-                <div class="jocke">
-                    <div>Раздел: <a href="#" class="section">Медицинские</a></div>
-                    <menu>
-                        <li>-Вас лечить хорошо или бесплатно?</li>
-                    </menu>
-                    <label for="next-1" class="more">
-                        <span>Показать ещё</span>
-                    </label>
-                </div>
-                <input name="more" type="radio" value="2" id="next-2" checked>
-                <div class="jocke">
-                    <div>Раздел: <a href="#" class="section">IT</a></div>
-                    <menu>
-                        <li>-Дедлайн</li>
-                    </menu>
-                    <label for="next-2" class="more">
-                        <span>Показать ещё</span>
-                    </label>
-                </div>
-            </article>
-            <article class="footer_block auto_news">
-                <a href="#">Автомобильные новости</a>
-                <div class="auto_news_block">
-                    <menu>
-                        <li>Самая мощный автомобиль за всю историю Corvette <span>13:06</span></li>
-                        <li>Правительство поддержало законопроект о регистрации машиномест 
-                            <span>12:19</span>
-                        </li>
-                        <li>Обзор нового Mitsubishi, за которым выстроилась очередь <span>12:01</span></li>
-                        <li>«Лады» оснастят системой управления со смартфона <span>11:40</span></li>
-                        <li>В Китае представили спорткар с двигателем от Focus RS <span>11:30</span></li>
-                        <li>Священник отчитал прихожан, а они заставили его продать Porsche 
-                            <span>12/11</span>
-                        </li>
-                    </menu>
-                    <div class="blackout-top"></div>
-                    <div class="blackout-bottom"></div>
-                </div>
             </article>
         </section>
     </main>
