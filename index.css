@@ -470,6 +470,11 @@ menu
     outline: 2px solid #ffdb4d;
 }
 
+.tv_program span
+{
+    padding-left: 5px;
+}
+
 .weather,
 .traffic,
 .map
