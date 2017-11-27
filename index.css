@@ -263,7 +263,7 @@ input
 .button_search
 {
     position: relative;
-    border-radius: 0px;
+    border-radius: 0;
     font-size: 13px;
     width: auto;
     height: 32px;
