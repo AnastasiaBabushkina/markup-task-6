@@ -42,6 +42,11 @@ li
     justify-content: flex-end;
 }
 
+.settings-wrapper
+{
+    position: relative;
+}
+
 .settings-widgets label::before
 {
     content: '';
@@ -107,7 +112,7 @@ input,
 .settings-widgets
 {
     position: absolute;
-    right: 13%;
+    left: -100px;
     top: 50px;
     font-size: 11px;
     background-color: #fff;
